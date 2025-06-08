@@ -3,3 +3,5 @@ USER root
 RUN apk add --no-cache ffmpeg curl
 RUN chown -R node:node /home/node/.n8n
 USER node
+# подкидываем кастомные ноды
+COPY ./custom /app/custom
